@@ -13,6 +13,25 @@ props:
       description: The card header
       examples:
         - I am a header!
+        -
+    title_sub:
+      type: string
+      title: Subtitle
+      description: The card subtitle
+      examples:
+        - I am a subtitle!
+    image:
+      type: string
+      title: Image URL
+      description: The URL of the image to display in the card.
+      examples:
+        - '/sites/default/files/crema-catalana-umami.jpg'
+    href:
+      type: string
+      title: Href
+      description: The URL to link to.
+      examples:
+        - 'https://www.example.org'
 slots:
   card_body:
     title: Body

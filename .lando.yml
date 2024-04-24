@@ -16,8 +16,8 @@ proxy:
     - d10sandbox.lndo.site
 #  mailhog:
 #    - mailhog.d10sandbox.lndo.site
-#  node:
-#    - bs.d10sandbox.lndo.site:3000
+  node:
+    - bs.d10sandbox.lndo.site:3000
 
 
 services:
@@ -56,6 +56,8 @@ services:
       - appserver
 
 tooling:
+  npm:
+    service: node
   yarn:
     service: node
   npx:
@@ -80,3 +82,8 @@ tooling:
     description: Disable xdebug for nginx.
     cmd: rm -f /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload && echo "Xdebug disabled"
     user: root
+
+  cr:
+    service: appserver
+    cmd: "drush cr"
+    description: Clear the cache.

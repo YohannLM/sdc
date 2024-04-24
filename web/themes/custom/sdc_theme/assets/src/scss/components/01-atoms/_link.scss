@@ -1,0 +1,11 @@
+// link
+
+a {
+  text-decoration: none;
+  color: var(--color-pink-conserto);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

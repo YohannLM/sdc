@@ -1,8 +1,17 @@
-<div {{ attributes.addClass('my-card') }}>
-  <h2 class="my-card__header">{{ header }}</h2>
-  <div class="my-card__body">
-    {% block card_body %}
-      Default contents for a card
-    {% endblock %}
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  {{ image }}
+  <div class="p-5">
+
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ header }}</h5>
+    <h2>{{ title_sub }}</h2>
+
+    {{ include('sdc_theme:my-cta', {
+      text: "En savoir plus",
+      herf: url,
+      target: '_blank'
+    })
+    }}
+
   </div>
 </div>

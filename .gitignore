@@ -28,6 +28,9 @@
 /web/sites/*/files
 /web/sites/*/private
 
+# ignore all node_modules
+/**/node_modules
+
 # Ignore multi-site test environment.
 /web/sites/simpletest
 
